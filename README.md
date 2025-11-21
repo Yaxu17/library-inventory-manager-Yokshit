@@ -15,15 +15,8 @@ A small command-line library inventory manager that demonstrates object-oriented
 - `tests/test_library.py` — unit tests using `unittest`
 
 ## How to run
-1. (Optional) Create a virtual environment and install dependencies:
 
-```bash
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-pip install -r requirements.txt
-```
-
-2. Run the CLI:
+1. Run the CLI:
 
 ```bash
 python -m cli.main
