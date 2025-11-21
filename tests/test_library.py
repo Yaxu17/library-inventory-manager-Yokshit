@@ -35,8 +35,15 @@ class TestLibraryInventory(unittest.TestCase):
         b = Book("IssueTest", "Author", "ISS1")
         self.inv.add_book(b)
         self.assertTrue(self.inv.issue_book("ISS1"))
-        self.assertFalse(self.inv.issue_book("ISS1"))  # already issued
+        self.assertFalse(self.inv.issue_book("ISS1"))  
         self.assertTrue(self.inv.return_book("ISS1"))
+
+    def test_remove_book(self):
+        b = Book("RemoveMe", "Author", "REM1")
+        self.inv.add_book(b)
+        self.assertIsNotNone(self.inv.search_by_isbn("REM1"))
+        self.assertTrue(self.inv.remove_book("REM1"))
+        self.assertIsNone(self.inv.search_by_isbn("REM1"))
 
 if __name__ == "__main__":
     unittest.main()

@@ -74,6 +74,20 @@ class LibraryInventory:
         logger.info("Book returned: %s", book)
         self.save()
         return True
+    
+    def remove_book(self, isbn: str) -> bool:
+        """Remove a book by ISBN. Returns True if removed, False if not found."""
+        book = self.search_by_isbn(isbn)
+        if not book:
+            return False
+        try:
+            self.books.remove(book)
+            logger.info("Book removed: %s", book)
+            self.save()
+            return True
+        except ValueError:
+            return False
+
 
     def save(self) -> None:
         """Persist the catalog to CSV. Robustly handles file errors."""

@@ -23,9 +23,10 @@ def menu() -> None:
         print("4. View All Books")
         print("5. Search by Title")
         print("6. Search by ISBN")
-        print("7. Exit")
+        print("7. Remove Book")
+        print("8. Exit")
 
-        choice = prompt("Choose an option (1-7): ")
+        choice = prompt("Choose an option (1-8): ")
         if choice == "1":
             try:
                 title = prompt("Title: ")
@@ -88,8 +89,18 @@ def menu() -> None:
                 print("Not found.")
             else:
                 print(book)
-
+                
         elif choice == "7":
+            isbn = prompt("ISBN to remove: ")
+            if not isbn:
+                print("ISBN required.")
+                continue
+            if inv.remove_book(isbn):
+                print("Book removed successfully.")
+            else:
+                print("Failed to remove book — check ISBN.")
+
+        elif choice == "8":
             print("Thank you for using the Library Inventory Manager!")
             sys.exit(0)
 
