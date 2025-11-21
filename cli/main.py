@@ -6,7 +6,7 @@ from library_manager.inventory import LibraryInventory
 from library_manager.book import Book
 
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
-logging.basicConfig(level=logging.INFO, format=LOG_FORMAT)
+logging.basicConfig(level=logging.INFO, format=LOG_FORMAT, datefmt="%d-%m-%Y %H:%M:%S")
 logger = logging.getLogger(__name__)
 
 def prompt(msg: str) -> str:
@@ -68,9 +68,9 @@ def menu() -> None:
             if not books:
                 print("No books in catalog.")
             else:
-                print("\nCatalog:")
+                print("\nBooks:")
                 for line in books:
-                    print(" - ", line)
+                    print(" --> ", line)
 
         elif choice == "5":
             q = prompt("Search title: ")
@@ -90,7 +90,7 @@ def menu() -> None:
                 print(book)
 
         elif choice == "7":
-            print("Goodbye!")
+            print("Thank you for using the Library Inventory Manager!")
             sys.exit(0)
 
         else:

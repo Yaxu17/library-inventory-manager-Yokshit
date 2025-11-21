@@ -2,7 +2,7 @@
 
 **Course:** Programming for Problem Solving using Python
 
-**Author:** Yokshit
+**Author:** Yokshit Rajora
 
 ## Overview
 A small command-line library inventory manager that demonstrates object-oriented design, file persistence (CSV), exception handling, and a menu-driven CLI.
@@ -30,3 +30,34 @@ python -m cli.main
 ```
 
 The program stores catalog data in `data/catalog.csv`.
+
+**Folder Structre**
+
+library-inventory-manager-yokshit-csv/
+│
+├── cli/
+│   ├── __init__.py
+│   └── main.py
+│
+├── library_manager/
+│   ├── __init__.py
+│   ├── book.py
+│   └── inventory.py
+│
+├── tests/
+│   ├── __init__.py
+│   └── test_library.py
+│
+├── data/
+│   └── catalog.csv
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── setup.py
+
+**Bibliography**
+
+- `Youtube` = Brocode
+- `Google`
+- `W3Schools.com`

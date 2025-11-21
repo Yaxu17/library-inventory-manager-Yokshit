@@ -12,7 +12,7 @@ class TestLibraryInventory(unittest.TestCase):
     def setUp(self):
         # create a temp file for CSV storage
         fd, self.tmpfile = tempfile.mkstemp(text=True)
-        os.close(fd)    # <-- VERY IMPORTANT FIX
+        os.close(fd)
         Path(self.tmpfile).write_text("title,author,isbn,status\n", encoding="utf-8")
         self.inv = LibraryInventory(storage_path=self.tmpfile)
 
