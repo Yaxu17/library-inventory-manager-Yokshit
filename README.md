@@ -48,6 +48,10 @@ library-inventory-manager-yokshit-csv/
 ├── requirements.txt
 ├── .gitignore
 ├── setup.py
+├── Output
+    ├── Screenshot 2025-11-22 133817.png
+    ├── Screenshot 2025-11-22 133911.png
+    └──Screenshot 2025-11-22 133931.png
 
 **Bibliography**
 
